@@ -1,4 +1,6 @@
-import com.thinking.machine.util.*;
+package common.testcases;
+
+import common.src.com.thinking.machine.util.Keyboard;
 
 
 class KeyBoardTestcase {
@@ -20,18 +22,18 @@ class KeyBoardTestcase {
         int e;
         e = k.getInt("enter a int type value:");
 
-        //byte f;
-        //f = k.getByte("enter a byte type value:");
+        byte f;
+        f = k.getByte("enter a byte type value:");
 
         short g;
         g = k.getShort("enter a short type value:");
 
-//        double h;
-//        h = k.getDouble("enter double type value:");
+        double h;
+        h = k.getDouble("enter double type value:");
 
 
-       // boolean i;
-        //i = k.getBoolean("enter a boolean type value:");
+        boolean i;
+        i = k.getBoolean("enter a boolean type value:");
 
         float j;
         j = k.getFloat("enter float type value:");

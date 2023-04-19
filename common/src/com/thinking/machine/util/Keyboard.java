@@ -1,4 +1,4 @@
-package com.thinking.machine.util;
+package common.src.com.thinking.machine.util;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,139 +9,152 @@ public class Keyboard {
 
     private BufferedReader bufferedReader;
 
-    public Keyboard()
-    {
+    public Keyboard() {
         bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     }
 
 
-    public String getString()  {
+    public String getString() {
         String str;
-        try{
+        try {
             str = bufferedReader.readLine();
-        }catch (IOException ioException)
-        {
-            str ="";
+        } catch (IOException ioException) {
+            str = "";
         }
         return str;
-        }
+    }
+
     public String getString(String message) {
         System.out.println(message);
-          return getString();
+        return getString();
     }
 
 
-    public char getCharacter()
-    {
+    public char getCharacter() {
         return getString().charAt(0);
     }
-    public char getCharacter(String message)
-    {
+
+    public char getCharacter(String message) {
         System.out.println(message);
-      return getCharacter();
+        return getCharacter();
     }
 
 
-    public long getLong()
-    {
+    public long getLong() {
         long x;
-        try
-        {
+        try {
             x = Long.parseLong(getString());
-        } catch (NumberFormatException numberFormatException)
-        {
-            x=0;
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
         }
         return x;
     }
 
 
-    public long getLong(String message)
-    {
+    public long getLong(String message) {
         System.out.println(message);
         return getLong();
     }
 
-    public int getInt()
-    {
+    public int getInt() {
         int x;
-        try
-        {
+        try {
             x = Integer.parseInt(getString());
-        } catch (NumberFormatException numberFormatException)
-        {
-            x=0;
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
         }
         return x;
     }
 
 
-    public int getInt(String message)
-    {
+    public int getInt(String message) {
         System.out.println(message);
         return getInt();
     }
 
 
-    public short getShort()
-    {
+    public short getShort() {
         short x;
-        try
-        {
+        try {
             x = Short.parseShort(getString());
-        } catch (NumberFormatException numberFormatException)
-        {
-            x=0;
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
         }
         return x;
     }
 
 
-    public short getShort(String message)
-    {
+    public short getShort(String message) {
         System.out.println(message);
         return getShort();
     }
 
-    public float getFloat()
-    {
+    public float getFloat() {
         float x;
-        try
-        {
+        try {
             x = Float.parseFloat(getString());
-        } catch (NumberFormatException numberFormatException)
-        {
-            x=0;
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
         }
         return x;
     }
 
 
-    public float getFloat(String message)
-    {
+    public float getFloat(String message) {
         System.out.println(message);
         return getFloat();
     }
 
 
-    public boolean getBlooean()
-    {
+    public boolean getBoolean() {
         boolean x;
-        try
-        {
+        try {
             x = Boolean.parseBoolean(getString());
-        } catch (NumberFormatException numberFormatException)
-        {
-            x=false;
+        } catch (NumberFormatException numberFormatException) {
+            x = false;
         }
         return x;
     }
 
 
-    public boolean getBlooean(String message)
-    {
+    public boolean getBoolean(String message) {
         System.out.println(message);
-        return getBlooean();
+        return getBoolean();
     }
+
+
+    public byte getByte() {
+        byte x;
+        try {
+            x = Byte.parseByte(getString());
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
+        }
+        return x;
+
+    }
+
+    public byte getByte(String message) {
+        System.out.println(message);
+        return getByte();
+    }
+
+
+    public double getDouble() {
+        double x;
+        try {
+            x = Byte.parseByte(getString());
+        } catch (NumberFormatException numberFormatException) {
+            x = 0;
+        }
+        return x;
+
+    }
+
+    public double getDouble(String message) {
+        System.out.println(message);
+        return getDouble();
+    }
+
 }
 
